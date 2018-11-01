@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		2。空对象方式创建new--实例化
+		var zhangsan=new Object();
+		console.log(zhangsan)
+		//对象的属性
+		zhangsan.name="张三";
+		zhangsan.age=88;
+		zhangsan.hobby="足球";
+		//对象的方法
+		zhangsan.eat=function(){
+			alert('吃');
+		}
+		
+		document.write(zhangsan.name+"年龄:"+zhangsan.age+"爱好："+zhangsan.hobby+"<br/>");
+		
+//		zhangsan.eat();
+		
+		//json对象
+			var x="age";
+			
+			var cat={
+				name:"猫",
+				age:4,
+				run:function(){
+					alert("跑");
+				},
+				1.88:"你好"
+			}
+//			cat.name---cat["name"];
+//			document.write(cat["name"])
+			//cat.x--无法解析变量  cat[x]--可以解析x为age
+			document.write(cat[x]);
+			//cat.1.88--错  --[]--可以解析number的key
+			document.write(cat[1.88]);
+		
+			//cat.run()
+			cat["run"]();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

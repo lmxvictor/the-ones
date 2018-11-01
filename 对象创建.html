@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//	 js--对象---js万物皆对象	
+		//1.对象是一类事物中的一个单体
+		
+			//人类 -->奥巴马   身高，体重，名字      吃，睡
+				
+			//总统类--》奥巴马 --》美国      演讲  
+		//2.对象都有属性和方法
+		
+		
+		var x=8;//全局变量 --都在window对象下
+		console.log(window.x)
+//		window.alert(888)
+		
+		//对象创建方式--》1.json形式的对象
+//		json对象-->{}里面由键值对（key:value）构成的,键值对用逗号隔开
+		var benchi={
+			name:"迈巴赫",
+			color:"红色",
+			pailiang:"2.0T",
+			men:4,
+			run:function(){
+				alert("车子跑起来")
+			},
+			jiayou:function(ml){
+				alert("正在加油"+ml)
+			}
+		}
+		//对象属性的使用  -->对象.属性
+		
+		document.write(benchi.name+benchi.color+"排量"+benchi.pailiang);
+		//对象方法的使用  对象.方法()
+		benchi.run()
+		benchi.jiayou("1000毫升");
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

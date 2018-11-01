@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		对象---对象是一类事物中的一个单体
+//      对象都有属性和方法
+
+//		1.json形式的对象
+		var car={
+			name:"奔驰",
+			run:function(){
+				
+			}
+		}
+//     2.空对象方式
+		var obj=new Object();
+		obj.name="hh";
+		obj.eat=function(){}
+//		3.对对象的封装---工厂函数
+		function carFac(name,age){
+			var obj={
+				name:name,
+				age:age
+			}
+			return obj
+		}
+//		4.构造函数 --对象的封装--实例化对象
+		function Car(){
+			this.cc="hh";
+			this.et=function(){
+				alert(1)
+			}
+		}
+		//原型共享方法
+		aa.prototype.run=function(){
+			
+		}
+		var aa1=new Car();
+		
+	//原型可以继承
+		Cat.prototype=new Animal();
+		Cat.prototype.run=function(){}
+//	car.constructor---判断对象的构造器
+//	car1	instanceof  构造器---判断是否相等 返回true  false
+//  Object.keys(car1); 
+
+	//this指向
+//		1.纯粹函数中--指向window
+//		2.json对象中 指向上层对象
+//      3.事件函数中   代表当前发生事件的元素对象
+//      4.构造函数中  代表实例化对象
+
+		function Tool(){
+			
+		}
+		Tool.prototype.sousuo=function(){
+			
+		}
+		Tool.prototype.gouwu=function(){
+			
+		}
+	var a=new Tool();
+	
+		var tools={
+			sousuo:function(){},
+			gouwu:function(){}
+		}
+
+	tools.sousuo();
+
+	
+
+		
+
+	
+		
+		
+	
+		
+		
+		
+	</script>
+</html>

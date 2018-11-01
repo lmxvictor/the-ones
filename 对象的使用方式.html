@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Car(name,age){
+			this.name=name;
+			this.age=age;
+		}
+		var car1=new Car("奔驰",4);
+//		constructor---构造器--分辨对象属于哪个构造函数
+			
+		console.log(car1.constructor)
+		
+		//instanceof--左边对象 《---》右边构造器 --判断是否相等
+		console.log(car1 instanceof Car);
+		console.log(car1 instanceof String);
+		
+	//Object.keys()---查看一个对象本身---的所有属性--返回一个数组
+		
+		console.log(Object.keys(car1))
+		
+		
+		
+			
+			
+	</script>
+</html>

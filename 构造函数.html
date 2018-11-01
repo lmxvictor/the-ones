@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//js对象
+		//	内置对象：String对象，Array对象，Math数学对象，Date日期对象，regExp正则表达式
+		//  自定义对象 1.json形式的对象  2.new Object 3.工厂函数  4.构造函数
+		//1构造函数(类)---对象的封装---实例化对象
+			function Car(name,num){
+				//构造属性
+				this.name=name;
+				this.color="红色";
+				this.men=num;
+				
+				//方法
+				this.run=function(){
+					document.write(this.name+"跑");
+				}
+			}
+			
+			
+			var bmw=new Car("宝马",2);
+			bmw.run();
+		
+			//每个函数都有原型属性prototype---完成共享和继承
+			Car.prototype.size="A";
+			//通过原型属性 给构造函数添加了方法--这个方法是每个对象共享的
+			//一般构造函数  方法写在原型上
+			Car.prototype.jiayou=function(){
+				document.write(this.name+"加油"+"<br/>");
+			}
+			
+			var benchi=new Car("奔驰",4);
+			console.log(benchi);
+			benchi.run();
+			benchi.jiayou();
+			document.write(benchi.size)
+			
+			var lanbo=new Car("兰博基尼",2);
+			lanbo.jiayou();
+			
+			
+			
+			
+			
+		
+			
+		
+			
+			
+		
+		
+	</script>
+</html>

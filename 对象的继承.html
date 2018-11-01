@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		//动物构造函数
+		function Animal(name,age){
+			this.name=name;
+			this.age=age;
+			
+		}
+		Animal.prototype.run=function(){
+			alert(this.name+"跑");
+		}
+		
+		var  dog=new Animal("狗",4);
+		dog.run();
+		
+		//猫的构造函数
+		function Cat(color){
+			this.color=color;
+			
+			this.eat=function(){
+				alert("吃");
+			}
+		}
+		
+
+		//猫类继承动物类
+		Cat.prototype=new Animal("猫",4);
+		//猫类的共享函数放在 继承下
+		Cat.prototype.zhua=function(){
+			alert(1);
+		}
+		//实例化猫类对象
+		var cat1=new Cat("黑色");
+		//继承后 猫类可以调用 动物类的属性和方法
+		
+		console.log(cat1.name+"--"+cat1.color);
+		cat1.eat();
+		cat1.zhua();
+		
+		
+//		function aa(){
+//			this.et=function(){
+//				alert(1)
+//			}
+//		}
+//		aa.prototype.et=function(){
+//			alert(2)
+//		}
+//		
+//		var  aa1=new aa();
+//		aa1.et();
+		
+	</script>
+</html>

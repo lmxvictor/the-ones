@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//工厂函数---对象的一个封装--创建不同的对象（面向对象开发的模式）
+		
+		
+			
+			function carFac(name,colors){
+					
+					var obj={
+							name:name,
+							color:colors,
+							run:function(){
+								alert(this.name+"跑");
+							},
+							jiayou:function(ml){
+								alert("加油"+ml);
+							}					
+					}
+					
+					return 	obj
+		
+			}
+			
+			//工厂函数  调用函数获取到不同的对象
+			var benchi=carFac("奔驰","红色");
+			console.log(benchi)
+			benchi.run();
+			var bmw=carFac("宝马","蓝色");
+		   console.log(bmw)
+			bmw.run()
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
